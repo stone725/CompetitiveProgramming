@@ -5,6 +5,6 @@ using namespace std;
 
 int main(){
     string str;
-    cin >> str;
-    cout << str << endl;
+    std::cin >> str;
+    std::cout << str << endl;
 }
