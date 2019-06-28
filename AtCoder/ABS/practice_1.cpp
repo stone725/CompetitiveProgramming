@@ -4,7 +4,10 @@
 using namespace std;
 
 int main(){
+    int a, b, c;
+    cin >> a >> b;
+    cin >> c;
     string str;
-    std::cin >> str;
-    std::cout << str << endl;
+    cin >> str;
+    cout << a + b + c << " " << str << "\n";
 }
