@@ -6,3 +6,6 @@ Greed-2.0-RC-7.1.0.jar
 TopCoder/greed.conf
 TopCoder/tester.cpp
 TopCoder/template.cpp
+*.html
+*.sample
+*.script
