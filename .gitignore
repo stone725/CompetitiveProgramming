@@ -4,5 +4,5 @@
 ContestAppletProd7.2.jnlp
 Greed-2.0-RC-7.1.0.jar
 TopCoder/greed.conf
-TopCoder/cpp.temp
-TopCoder/cpptest.temp
+TopCoder/tester.cpp
+TopCoder/template.cpp
