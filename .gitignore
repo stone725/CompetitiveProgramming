@@ -9,3 +9,4 @@ TopCoder/template.cpp
 *.html
 *.sample
 *.script
+Library/*.cpp
