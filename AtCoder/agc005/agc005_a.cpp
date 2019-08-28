@@ -7,19 +7,20 @@ using namespace std;
 int main(){
     string str;
     cin >> str;
-    int ans = str.size();
     stack<int> s;
     int g = 0;
     while(g < str.size()){
         if(str[g] == 'S'){
             s.push(g);
         }else{
-            if(s.size() && str[s.top()]){
+            if(s.size() && str[s.top()] == 'S'){
                 s.pop();
-                ans -= 2;
+            }
+            else{
+                s.push(g);
             }
         }
         g++;
     }
-    cout << ans << "\n";
+    cout << s.size() << "\n";
 }
