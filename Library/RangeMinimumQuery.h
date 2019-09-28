@@ -22,7 +22,7 @@ struct RangeMinimumQuery{
     }
 
     int query(int a, int b, int k, int l, int r){
-        if(r <= a || r <= b) return std::numeric_limits<int>::max();
+        if(r <= a || b <= l) return std::numeric_limits<int>::max();
         if(a <= l && r <= b) return dat[k];
         else{
             int vl = query(a, b, k * 2 + 1, l, (l + r) / 2);
