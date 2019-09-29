@@ -55,6 +55,16 @@ public:
         this->num = num % Mod;
         return this->num;
     }
+
+    constexpr ModInt pow(u64 k){
+        return pow(num, k);
+    }
+
+    static constexpr ModInt pow(ModInt x, u64 k){
+        if(k == 0) return 1;
+        if(k % 2 == 0) return pow((x * x).num % Mod, k / 2);
+        else return (x * pow(x, k - 1)).num % Mod;
+    }
 };
 
 template<std::uint_fast64_t Mod>
