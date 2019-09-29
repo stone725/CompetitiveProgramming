@@ -53,7 +53,7 @@ public:
     }
     constexpr ModInt &operator=(const u64 num) noexcept {
         this->num = num % Mod;
-        return this->num;
+        return *this;
     }
 
     constexpr ModInt pow(u64 k){
