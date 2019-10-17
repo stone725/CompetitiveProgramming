@@ -3,14 +3,16 @@
 struct Union_Find {
     std::vector<int> par;
     std::vector<int> rank;
-    
+    std::vector<int> sz;
     //初期化
     void init( int n ) {
         par.resize( n );
         rank.resize( n );
+        sz.resize(n);
         for ( int i = 0; i < n; ++i ) {
             par[ i ] = i;
             rank[ i ] = 0;
+            sz[ i ] = 1;
         }
     }
     
@@ -28,6 +30,8 @@ struct Union_Find {
         if ( a == b ) {
             return;
         }
+        int size = sz[a] + sz[b];
+        sz[a] = sz[b] = size;
         if ( rank[ a ] < rank[ b ] ) {
             par[ a ] = b;
         }
@@ -45,7 +49,7 @@ struct Union_Find {
     }
     
     //サイズを返す
-    unsigned int size() {
-        return par.size();
+    int size(int n) {
+        return sz[find(n)];
     }
 };
