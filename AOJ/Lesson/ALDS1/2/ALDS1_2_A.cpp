@@ -6,31 +6,38 @@ using namespace std;
 
 vector<int> a;
 
-int bubbleSort(){
+int bubbleSort()
+{
     int cnt = 0;
     bool flag;
-    do{
+    do
+    {
         flag = false;
-        for(int i = a.size() - 1; i > 0; i--){
-            if(a[i] < a[i - 1]){
+        for (int i = a.size() - 1; i > 0; i--)
+        {
+            if (a[i] < a[i - 1])
+            {
                 swap(a[i], a[i - 1]);
                 flag = true;
                 cnt++;
             }
         }
-    }while(flag);
+    } while (flag);
     return cnt;
 }
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     a.resize(n);
-    for(auto&& i : a){
+    for (auto &&i : a)
+    {
         cin >> i;
     }
     int ans = bubbleSort();
-    for(int i = 0; i < n - 1; i++){
+    for (int i = 0; i < n - 1; i++)
+    {
         cout << a[i] << " ";
     }
     cout << a[n - 1] << "\n";

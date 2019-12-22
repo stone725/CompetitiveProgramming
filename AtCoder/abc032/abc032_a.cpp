@@ -2,17 +2,20 @@
 
 using namespace std;
 
-int gcd(int a, int b){
+int gcd(int a, int b)
+{
     return b ? gcd(b, a % b) : a;
 }
 
-int main(){
+int main()
+{
     int a, b, n;
     cin >> a;
     cin >> b;
     cin >> n;
     int lcm = a * b / gcd(a, b);
-    if(n % lcm == 0){
+    if (n % lcm == 0)
+    {
         cout << n << "\n";
         return 0;
     }

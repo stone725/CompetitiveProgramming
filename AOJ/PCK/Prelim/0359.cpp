@@ -2,10 +2,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int x;
     cin >> x;
-    switch(x % 7){
+    switch (x % 7)
+    {
     case 0:
         cout << "thu";
         break;

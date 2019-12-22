@@ -4,11 +4,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, c;
     cin >> n >> c;
     vector<int> cakes(c);
-    for(auto&& i : cakes){
+    for (auto &&i : cakes)
+    {
         cin >> i;
     }
     int sum = accumulate(begin(cakes), end(cakes), 0);

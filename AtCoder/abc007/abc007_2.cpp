@@ -3,12 +3,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
-    if(str == "a"){
+    if (str == "a")
+    {
         cout << "-1\n";
-    }else{
+    }
+    else
+    {
         cout << "a\n";
     }
 }

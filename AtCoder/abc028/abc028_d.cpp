@@ -3,8 +3,8 @@
 
 using namespace std;
 
-
-int main(){
+int main()
+{
     int n, k;
     cin >> n >> k;
     double ans = 1. / n * (k - 1) / n * (n - k) / n * 3 * 2;

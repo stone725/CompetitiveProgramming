@@ -4,38 +4,48 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 
 	int n;
 	int cnt[26];
 	vector<char> vote;
-	while (cin >> n && n) {
+	while (cin >> n && n)
+	{
 		vote.resize(n);
-		for (auto&& i : vote) {
+		for (auto &&i : vote)
+		{
 			cin >> i;
 		}
-		for (int i = 0; i < 26; i++) {
+		for (int i = 0; i < 26; i++)
+		{
 			cnt[i] = 0;
 		}
 		bool br = true;
 		char firstP = 'A', secondP = 'B';
-		for (int i = 1; i <= n; i++) {
+		for (int i = 1; i <= n; i++)
+		{
 			cnt[vote[i - 1] - 'A']++;
-			if (firstP != vote[i - 1] && cnt[firstP - 'A'] < cnt[vote[i - 1] - 'A']) {
+			if (firstP != vote[i - 1] && cnt[firstP - 'A'] < cnt[vote[i - 1] - 'A'])
+			{
 				secondP = firstP;
 				firstP = vote[i - 1];
-			} else if (firstP != vote[i - 1] && cnt[secondP - 'A'] < cnt[vote[i - 1] - 'A']) {
+			}
+			else if (firstP != vote[i - 1] && cnt[secondP - 'A'] < cnt[vote[i - 1] - 'A'])
+			{
 				secondP = vote[i - 1];
 			}
-			if (cnt[firstP - 'A'] > cnt[secondP - 'A'] + n - i) {
+			if (cnt[firstP - 'A'] > cnt[secondP - 'A'] + n - i)
+			{
 				cout << firstP << " " << i << "\n";
 				br = false;
 				break;
 			}
 		}
-		if (br) {
+		if (br)
+		{
 			cout << "TIE\n";
 		}
 	}

@@ -2,22 +2,32 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
-    while(cin >> n && n){
-            int score = 0;
-        for(int i = 1; i * i <= n && i < n; i++){
-            if(n % i) continue;
+    while (cin >> n && n)
+    {
+        int score = 0;
+        for (int i = 1; i * i <= n && i < n; i++)
+        {
+            if (n % i)
+                continue;
             score += i;
-            if(i * i < n && i != 1){
+            if (i * i < n && i != 1)
+            {
                 score += n / i;
             }
         }
-        if(n == score){
+        if (n == score)
+        {
             cout << "perfect number\n";
-        }else if(n > score){
+        }
+        else if (n > score)
+        {
             cout << "deficient number\n";
-        }else{
+        }
+        else
+        {
             cout << "abundant number\n";
         }
     }

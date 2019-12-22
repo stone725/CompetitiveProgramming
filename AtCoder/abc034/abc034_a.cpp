@@ -2,12 +2,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int x, y;
     cin >> x >> y;
-    if(x < y){
+    if (x < y)
+    {
         cout << "Better\n";
-    }else{
+    }
+    else
+    {
         cout << "Worse\n";
     }
 }

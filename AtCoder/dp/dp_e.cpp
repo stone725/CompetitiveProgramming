@@ -13,27 +13,35 @@ vector<pair<int, int>> goods;
 
 long long dp[101][100001];
 
-int main(){
+int main()
+{
     cin >> n >> w;
-    for(int i = 0; i <= 100; i++){
-        for(int j = 1; j <= 100000; j++){
+    for (int i = 0; i <= 100; i++)
+    {
+        for (int j = 1; j <= 100000; j++)
+        {
             dp[i][j] = 1ll << 60;
         }
     }
-    
-    for(int i = 0; i < n; i++){
+
+    for (int i = 0; i < n; i++)
+    {
         int w, v;
         cin >> w >> v;
-        for(int j = 0; j <= 100000; j++){
+        for (int j = 0; j <= 100000; j++)
+        {
             dp[i + 1][j] = dp[i][j];
-            if(v <= j){
+            if (v <= j)
+            {
                 dp[i + 1][j] = min(dp[i + 1][j], w + dp[i][j - v]);
             }
         }
     }
 
-    for(int i = 100000; i >= 0; i--){
-        if(dp[n][i] <= w){
+    for (int i = 100000; i >= 0; i--)
+    {
+        if (dp[n][i] <= w)
+        {
             cout << i << "\n";
             return 0;
         }
