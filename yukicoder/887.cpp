@@ -3,19 +3,25 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, nmax;
     cin >> n;
     nmax = n;
     int i = 0;
-    while(n != 1){
-        if(n % 2){
+    while (n != 1)
+    {
+        if (n % 2)
+        {
             n = 3 * n + 1;
-        }else{
+        }
+        else
+        {
             n /= 2;
         }
         nmax = max(nmax, n);
         i++;
     }
-    cout << i << "\n" << nmax << "\n";
+    cout << i << "\n"
+         << nmax << "\n";
 }

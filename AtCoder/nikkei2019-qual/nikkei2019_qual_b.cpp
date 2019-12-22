@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string a, b, c;
@@ -11,13 +12,17 @@ int main(){
     cin >> b;
     cin >> c;
     int ans = 0;
-    for(int i = 0; i < n; i++){
-        if(a[i] != b[i]){
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] != b[i])
+        {
             ans++;
         }
-        if(b[i] != c[i]){
+        if (b[i] != c[i])
+        {
             ans++;
-            if(a[i] == c[i]){
+            if (a[i] == c[i])
+            {
                 ans--;
             }
         }

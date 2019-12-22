@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string s, t;
     cin >> s >> t;
     int ans = 0;
-    for(int i = 0; i < s.size(); i++){
+    for (int i = 0; i < s.size(); i++)
+    {
         ans += s[i] == t[i];
     }
     cout << ans << "\n";

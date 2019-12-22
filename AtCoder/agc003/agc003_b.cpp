@@ -3,18 +3,22 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     vector<int> a(n);
-    for(auto&& i : a){
+    for (auto &&i : a)
+    {
         cin >> i;
     }
     long long ans = 0;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         ans += a[i] / 2;
         a[i] %= 2;
-        if(i + 1 < n){
+        if (i + 1 < n)
+        {
             ans += a[i] && a[i + 1];
             a[i + 1] -= a[i] && a[i + 1];
         }

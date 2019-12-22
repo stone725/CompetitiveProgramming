@@ -2,13 +2,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, t, e;
     cin >> n >> t >> e;
-    for(int i = 1; i <= n; i++){
+    for (int i = 1; i <= n; i++)
+    {
         int x;
         cin >> x;
-        if(t - e <= (t + e) / x * x){
+        if (t - e <= (t + e) / x * x)
+        {
             cout << i << "\n";
             return 0;
         }

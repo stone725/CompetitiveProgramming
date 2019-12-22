@@ -4,12 +4,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
-    if(8 <= count(begin(str), end(str), 'o') + 15 - str.size()){
+    if (8 <= count(begin(str), end(str), 'o') + 15 - str.size())
+    {
         cout << "YES\n";
-    }else{
+    }
+    else
+    {
         cout << "NO\n";
     }
 }

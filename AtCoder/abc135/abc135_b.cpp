@@ -4,21 +4,27 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     vector<int> p(n);
-    for(auto&& i : p){
+    for (auto &&i : p)
+    {
         cin >> i;
     }
-    if(is_sorted(begin(p), end(p))){
+    if (is_sorted(begin(p), end(p)))
+    {
         cout << "YES\n";
         return 0;
     }
-    for(int i = 0; i < n; i++){
-        for(int j = i + 1; j < n; j++){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
             swap(p[i], p[j]);
-            if(is_sorted(begin(p), end(p))){
+            if (is_sorted(begin(p), end(p)))
+            {
                 cout << "YES\n";
                 return 0;
             }

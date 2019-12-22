@@ -3,16 +3,21 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     int num = stoi(str), div = 0;
-    for(auto&& i : str){
+    for (auto &&i : str)
+    {
         div += i - '0';
     }
-    if(num % div){
+    if (num % div)
+    {
         cout << "No\n";
-    }else{
+    }
+    else
+    {
         cout << "Yes\n";
     }
 }

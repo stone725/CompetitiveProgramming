@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     map<string, int> swi;

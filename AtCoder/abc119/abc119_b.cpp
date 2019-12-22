@@ -4,18 +4,23 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     const double BTCJPY = 380000.0;
     int n;
     cin >> n;
     double ans = 0;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         double x;
         string str;
         cin >> x >> str;
-        if(str == "JPY"){
+        if (str == "JPY")
+        {
             ans += x;
-        }else{
+        }
+        else
+        {
             ans += x * BTCJPY;
         }
     }

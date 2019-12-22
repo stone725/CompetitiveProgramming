@@ -3,27 +3,38 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, m;
     cin >> n >> m;
     set<int> s;
-    while(m--){
+    while (m--)
+    {
         int a, b;
         cin >> a >> b;
-        if(s.count(a)){
+        if (s.count(a))
+        {
             s.erase(a);
-        }else{
+        }
+        else
+        {
             s.insert(a);
         }
-        if(s.count(b)){
+        if (s.count(b))
+        {
             s.erase(b);
-        }else{
+        }
+        else
+        {
             s.insert(b);
         }
     }
-    if(s.size()){
+    if (s.size())
+    {
         cout << "NO\n";
-    }else{
+    }
+    else
+    {
         cout << "YES\n";
     }
 }

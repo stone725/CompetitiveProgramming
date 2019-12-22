@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     double cnt = 0;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int a;
         cin >> a;
         cnt += 1. / a;

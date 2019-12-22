@@ -2,11 +2,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     long long x, y;
     cin >> x >> y;
     long long ans = 0;
-    while(x <= y){
+    while (x <= y)
+    {
         ans++;
         x *= 2;
     }

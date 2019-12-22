@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string nowstring;
@@ -12,14 +13,19 @@ int main(){
     set<string> s;
     s.insert(nowstring);
     bool win = true;
-    for(int i = 0; i < n - 1; i++){
+    for (int i = 0; i < n - 1; i++)
+    {
         string nextstring;
         cin >> nextstring;
-        if(nextstring[0] != nowstring.back() || s.count(nextstring)){
-            if(win){
+        if (nextstring[0] != nowstring.back() || s.count(nextstring))
+        {
+            if (win)
+            {
                 cout << "WIN\n";
                 return 0;
-            }else{
+            }
+            else
+            {
                 cout << "LOSE\n";
                 return 0;
             }

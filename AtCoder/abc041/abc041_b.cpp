@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     const int INF = 1e9 + 7;
     long long a, b, c;
     cin >> a >> b >> c;

@@ -3,23 +3,30 @@
 
 using namespace std;
 
-bool check(string str){
-    if(str.size() < 7){
+bool check(string str)
+{
+    if (str.size() < 7)
+    {
         return false;
     }
     auto p = str.find("okyo");
     return p == string::npos ? false : str.find("ech", p) != string::npos;
 }
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
-    while(n--){
+    while (n--)
+    {
         string str;
         cin >> str;
-        if(check(str)){
+        if (check(str))
+        {
             cout << "Yes\n";
-        }else{
+        }
+        else
+        {
             cout << "No\n";
         }
     }

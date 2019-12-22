@@ -7,11 +7,14 @@ using namespace std;
 int n, m;
 vector<int> x;
 
-bool check(long long mid){
+bool check(long long mid)
+{
     long long p = 0;
-    for(auto&& i : x){
+    for (auto &&i : x)
+    {
         long long l = max(0ll, i - p - 1);
-        if(mid < l){
+        if (mid < l)
+        {
             return false;
         }
         p = i + max(mid - 2 * l, (mid - l) / 2);
@@ -19,18 +22,24 @@ bool check(long long mid){
     return n <= p;
 }
 
-int main(){
+int main()
+{
     cin >> n >> m;
     x.resize(m);
-    for(auto&& i : x){
+    for (auto &&i : x)
+    {
         cin >> i;
     }
     long long s = -1, g = n * 2;
-    while(1 < (g - s)){
+    while (1 < (g - s))
+    {
         long long mid = (g + s) / 2;
-        if(check(mid)){
+        if (check(mid))
+        {
             g = mid;
-        }else{
+        }
+        else
+        {
             s = mid;
         }
     }

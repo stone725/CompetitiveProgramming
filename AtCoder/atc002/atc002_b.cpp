@@ -1,55 +1,69 @@
 #include <iostream>
 #include <cstdint>
 
-class RuntimeModInt {
+class RuntimeModInt
+{
     using u64 = std::uint_fast64_t;
-    
-    static u64 &mod() {
+
+    static u64 &mod()
+    {
         static u64 mod_ = 0;
         return mod_;
     }
 
 public:
     u64 num;
-    
+
     RuntimeModInt(const u64 x = 0) : num(x % get_mod()) {}
     u64 &value() noexcept { return num; }
     const u64 &value() const noexcept { return num; }
-    RuntimeModInt operator+(const RuntimeModInt rhs) const {
+    RuntimeModInt operator+(const RuntimeModInt rhs) const
+    {
         return RuntimeModInt(*this) += rhs;
     }
-    RuntimeModInt operator-(const RuntimeModInt rhs) const {
+    RuntimeModInt operator-(const RuntimeModInt rhs) const
+    {
         return RuntimeModInt(*this) -= rhs;
     }
-    RuntimeModInt operator*(const RuntimeModInt rhs) const {
+    RuntimeModInt operator*(const RuntimeModInt rhs) const
+    {
         return RuntimeModInt(*this) *= rhs;
     }
-    RuntimeModInt operator/(const RuntimeModInt rhs) const {
+    RuntimeModInt operator/(const RuntimeModInt rhs) const
+    {
         return RuntimeModInt(*this) /= rhs;
     }
 
-    RuntimeModInt &operator+=(const RuntimeModInt rhs) {
+    RuntimeModInt &operator+=(const RuntimeModInt rhs)
+    {
         num += rhs.num;
-        if (num >= get_mod()) {
+        if (num >= get_mod())
+        {
             num -= get_mod();
         }
         return *this;
     }
-    RuntimeModInt &operator-=(const RuntimeModInt rhs) {
-        if (num < rhs.num) {
+    RuntimeModInt &operator-=(const RuntimeModInt rhs)
+    {
+        if (num < rhs.num)
+        {
             num += get_mod();
         }
         num -= rhs.num;
         return *this;
     }
-    RuntimeModInt &operator*=(const RuntimeModInt rhs) {
+    RuntimeModInt &operator*=(const RuntimeModInt rhs)
+    {
         num = num * rhs.num % get_mod();
         return *this;
     }
-    RuntimeModInt &operator/=(RuntimeModInt rhs) {
+    RuntimeModInt &operator/=(RuntimeModInt rhs)
+    {
         u64 exp = get_mod() - 2;
-        while (exp) {
-            if (exp % 2) {
+        while (exp)
+        {
+            if (exp % 2)
+            {
                 *this *= rhs;
             }
             rhs *= rhs;
@@ -58,20 +72,26 @@ public:
         return *this;
     }
 
-    RuntimeModInt &operator=(const u64 num) noexcept {
+    RuntimeModInt &operator=(const u64 num) noexcept
+    {
         this->num = num % get_mod();
         return *this;
     }
 
-    RuntimeModInt pow(u64 k){
+    RuntimeModInt pow(u64 k)
+    {
         return pow(num, k);
     }
 
-    RuntimeModInt pow(RuntimeModInt x, u64 k) {
-		if (k == 0) return 1;
-		if (k % 2 == 0) return pow((x * x).num % get_mod(), k / 2);
-		else return (x * pow(x, k - 1)).num % get_mod();
-	}
+    RuntimeModInt pow(RuntimeModInt x, u64 k)
+    {
+        if (k == 0)
+            return 1;
+        if (k % 2 == 0)
+            return pow((x * x).num % get_mod(), k / 2);
+        else
+            return (x * pow(x, k - 1)).num % get_mod();
+    }
     static void set_mod(const u64 x) { mod() = x; }
     static u64 get_mod() { return mod(); }
 };
@@ -85,7 +105,8 @@ std::ostream &operator<<(std::ostream &out, const RuntimeModInt &m)
 std::istream &operator>>(std::istream &in, RuntimeModInt &m)
 {
     in >> m.num;
-    if(m.num >= m.get_mod()){
+    if (m.num >= m.get_mod())
+    {
         m.num %= m.get_mod();
     }
     return in;
@@ -93,7 +114,8 @@ std::istream &operator>>(std::istream &in, RuntimeModInt &m)
 
 using namespace std;
 
-int main(){
+int main()
+{
     long long n, m, p;
     cin >> n >> m >> p;
     RuntimeModInt::set_mod(m);

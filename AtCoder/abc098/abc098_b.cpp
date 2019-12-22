@@ -5,18 +5,22 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string str;
     cin >> str;
     int ans = 0;
-    for(int i = 1; i < n; i++){
+    for (int i = 1; i < n; i++)
+    {
         string f = str.substr(0, i);
         string s = str.substr(i);
         set<char> cnt;
-        for(auto&& i : f){
-            if(count(begin(s), end(s), i)){
+        for (auto &&i : f)
+        {
+            if (count(begin(s), end(s), i))
+            {
                 cnt.insert(i);
             }
         }

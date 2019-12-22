@@ -2,15 +2,17 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     long long ans = 0;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int num;
         cin >> num;
         ans *= 2;
         ans += num;
-    } 
+    }
     cout << ans << "\n";
 }

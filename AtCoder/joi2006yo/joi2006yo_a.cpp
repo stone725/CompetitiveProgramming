@@ -2,18 +2,25 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     int ascore = 0, bscore = 0;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int a, b;
         cin >> a >> b;
-        if(a < b){
+        if (a < b)
+        {
             bscore += a + b;
-        }else if(b < a){
+        }
+        else if (b < a)
+        {
             ascore += a + b;
-        }else{
+        }
+        else
+        {
             ascore += a;
             bscore += b;
         }

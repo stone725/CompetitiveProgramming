@@ -3,14 +3,20 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
-    if(str == "Sunny"){
+    if (str == "Sunny")
+    {
         cout << "Cloudy\n";
-    }else if(str == "Cloudy"){
+    }
+    else if (str == "Cloudy")
+    {
         cout << "Rainy\n";
-    }else{
+    }
+    else
+    {
         cout << "Sunny\n";
     }
 }

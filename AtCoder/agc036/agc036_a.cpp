@@ -2,10 +2,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     long long s;
     cin >> s;
-    if(s == 1e18){
+    if (s == 1e18)
+    {
         cout << "0 0 0 1000000000 1000000000 0";
         return 0;
     }

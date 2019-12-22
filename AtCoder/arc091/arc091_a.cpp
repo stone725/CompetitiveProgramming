@@ -3,14 +3,20 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     long long n, m;
     cin >> n >> m;
-    if(m < n) swap(n, m);
-    if(n == 1){
-        if(m == 1){
+    if (m < n)
+        swap(n, m);
+    if (n == 1)
+    {
+        if (m == 1)
+        {
             cout << 1 << "\n";
-        }else{
+        }
+        else
+        {
             cout << m - 2 << "\n";
         }
         return 0;

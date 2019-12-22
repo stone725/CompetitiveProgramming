@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     double height, bmi;
     cin >> height >> bmi;
     height /= 100;

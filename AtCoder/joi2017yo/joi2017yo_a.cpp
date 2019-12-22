@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int a, b, c, d, e;
     cin >> a;
     cin >> b;
@@ -10,7 +11,8 @@ int main(){
     cin >> d;
     cin >> e;
     int ans = 0;
-    if(a < 0){
+    if (a < 0)
+    {
         ans += -a * c + d;
         a = 0;
     }

@@ -3,10 +3,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
-    for(int i = 1; i <= str.size(); i++){
+    for (int i = 1; i <= str.size(); i++)
+    {
         cout << i << "\n";
     }
 }

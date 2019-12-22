@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     long long a, b;
     cin >> a >> b;
     cout << a / b << ".";
-    for(int i = 0; i < 50; i++){
+    for (int i = 0; i < 50; i++)
+    {
         a %= b;
         a *= 10;
         cout << a / b;

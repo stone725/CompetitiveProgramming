@@ -12,15 +12,20 @@ vector<vector<int>> edge;
 vector<int> deg;
 map<pair<int, int>, int> mp;
 
-void dfs(int now, int s){
+void dfs(int now, int s)
+{
     int cnt = 1;
     vector<bool> used(d, false);
-    if(now != 0){
+    if (now != 0)
+    {
         used[s - 1] = true;
     }
-    for(auto&& i : edge[now]){
-        for(int j = 1; j <= d; j++){
-            if(used[j - 1]) continue;
+    for (auto &&i : edge[now])
+    {
+        for (int j = 1; j <= d; j++)
+        {
+            if (used[j - 1])
+                continue;
             used[j - 1] = true;
             mp[make_pair(now, i)] = j;
             maxelement = max(maxelement, j);
@@ -30,11 +35,13 @@ void dfs(int now, int s){
     }
 }
 
-int main(){
+int main()
+{
     cin >> n;
     edge.resize(n);
     deg.resize(n);
-    for(int i = 0; i < n - 1; i++){
+    for (int i = 0; i < n - 1; i++)
+    {
         int a, b;
         cin >> a >> b;
         input.push_back(make_pair(a - 1, b - 1));
@@ -42,12 +49,14 @@ int main(){
         deg[a - 1]++;
         deg[b - 1]++;
     }
-    for(auto&& i : deg){
+    for (auto &&i : deg)
+    {
         d = max(d, i);
     }
     dfs(0, 0);
     cout << maxelement << "\n";
-    for(auto&& i : input){
+    for (auto &&i : input)
+    {
         cout << mp[i] << "\n";
     }
 }

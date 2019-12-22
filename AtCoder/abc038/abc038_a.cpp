@@ -3,12 +3,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
-    if(str.back() == 'T'){
+    if (str.back() == 'T')
+    {
         cout << "YES\n";
-    }else{
+    }
+    else
+    {
         cout << "NO\n";
     }
 }

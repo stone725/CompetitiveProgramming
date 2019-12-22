@@ -3,14 +3,18 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string s;
     cin >> s;
-    if(3200 <= n){
+    if (3200 <= n)
+    {
         cout << s << "\n";
-    }else{
+    }
+    else
+    {
         cout << "red\n";
     }
 }

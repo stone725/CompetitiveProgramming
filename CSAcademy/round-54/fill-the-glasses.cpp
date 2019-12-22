@@ -5,11 +5,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, k;
     cin >> n >> k;
     vector<int> a(n);
-    for(auto&& i : a){
+    for (auto &&i : a)
+    {
         cin >> i;
     }
     sort(begin(a), end(a));

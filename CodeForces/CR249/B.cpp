@@ -4,25 +4,32 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     int n;
     cin >> str >> n;
     int p = 0;
-    while(n){
+    while (n)
+    {
         bool check = true;
-        for(int i = p; i < str.size(); i++){
+        for (int i = p; i < str.size(); i++)
+        {
             char maxscore = str[i];
             int changepoint = i;
-            for(int j = i + 1; j < str.size() && j - i <= n; j++){
-                if(maxscore < str[j]){
+            for (int j = i + 1; j < str.size() && j - i <= n; j++)
+            {
+                if (maxscore < str[j])
+                {
                     changepoint = j;
                     maxscore = str[j];
                 }
             }
-            if(changepoint != i){
+            if (changepoint != i)
+            {
                 n -= changepoint - i;
-                for(int j = changepoint; j > i; j--){
+                for (int j = changepoint; j > i; j--)
+                {
                     swap(str[j], str[j - 1]);
                 }
                 p = i;
@@ -30,7 +37,8 @@ int main(){
                 break;
             }
         }
-        if(check){
+        if (check)
+        {
             break;
         }
     }

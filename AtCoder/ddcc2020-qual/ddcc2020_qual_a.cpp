@@ -2,11 +2,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int x, y;
     cin >> x >> y;
     int ans = 0;
-    switch(x){
+    switch (x)
+    {
     case 1:
         ans += 100000;
     case 2:
@@ -14,7 +16,8 @@ int main(){
     case 3:
         ans += 100000;
     }
-    switch(y){
+    switch (y)
+    {
     case 1:
         ans += 100000;
     case 2:

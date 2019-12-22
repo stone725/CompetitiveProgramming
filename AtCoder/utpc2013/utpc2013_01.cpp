@@ -3,13 +3,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     int cnt[4] = {};
     bool check = true;
-    for(int i = 0; i < 4; i++){
-        switch(str[i]){
+    for (int i = 0; i < 4; i++)
+    {
+        switch (str[i])
+        {
         case 'B':
             cnt[i] += 2;
             break;
@@ -31,9 +34,12 @@ int main(){
             check &= cnt[i] == 0;
         }
     }
-    if(check){
+    if (check)
+    {
         cout << "yes\n";
-    }else{
+    }
+    else
+    {
         cout << "no\n";
     }
 }

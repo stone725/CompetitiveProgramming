@@ -2,12 +2,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     char C, c;
     cin >> C >> c;
-    if(C - 'A' == c - 'a'){
+    if (C - 'A' == c - 'a')
+    {
         cout << "Yes\n";
-    }else{
+    }
+    else
+    {
         cout << "No\n";
     }
 }

@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string checkstr = "";
-    for(int i = 0; checkstr.size() <= n; i++){
+    for (int i = 0; checkstr.size() <= n; i++)
+    {
         checkstr += to_string(i);
     }
     cout << checkstr[n] << "\n";

@@ -4,11 +4,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     int ans = 753;
-    for(int i = 0; i + 3 <= str.size(); i++){
+    for (int i = 0; i + 3 <= str.size(); i++)
+    {
         ans = min(ans, abs(753 - stoi(str.substr(i, 3))));
     }
     cout << ans << "\n";

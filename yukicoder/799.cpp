@@ -3,10 +3,12 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    if(b < c || d < a){
+    if (b < c || d < a)
+    {
         cout << (b - a + 1) * (d - c + 1) << "\n";
         return 0;
     }

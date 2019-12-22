@@ -4,28 +4,36 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int q;
     cin >> q;
-    while(q--){
+    while (q--)
+    {
         int n;
         cin >> n;
         list<int> p(n);
-        for(auto&& i : p){
+        for (auto &&i : p)
+        {
             cin >> i;
         }
         bool check = false;
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++)
+        {
             check = is_sorted(begin(p), end(p)) || is_sorted(rbegin(p), rend(p));
-            if(check){
+            if (check)
+            {
                 break;
             }
             p.push_back(p.front());
             p.pop_front();
         }
-        if(check){
+        if (check)
+        {
             cout << "YES\n";
-        }else{
+        }
+        else
+        {
             cout << "NO\n";
         }
     }

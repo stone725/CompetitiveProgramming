@@ -9,8 +9,10 @@ static const int INF = 1e9 + 7;
 int n, a, b, c;
 vector<int> l;
 
-int dfs(int now, int A, int B, int C){
-    if(now == n){
+int dfs(int now, int A, int B, int C)
+{
+    if (now == n)
+    {
         return !A || !B || !C ? INF : abs(A - a) + abs(B - b) + abs(C - c);
     }
     int res = dfs(now + 1, A, B, C);
@@ -20,10 +22,12 @@ int dfs(int now, int A, int B, int C){
     return res;
 }
 
-int main(){
+int main()
+{
     cin >> n >> a >> b >> c;
     l.resize(n);
-    for(auto&& i : l){
+    for (auto &&i : l)
+    {
         cin >> i;
     }
     cout << dfs(0, 0, 0, 0) << "\n";

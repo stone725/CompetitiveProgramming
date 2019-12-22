@@ -4,14 +4,18 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     string str;
     cin >> str;
-    if(count(begin(str), end(str), 'R') * 2 > n){
+    if (count(begin(str), end(str), 'R') * 2 > n)
+    {
         cout << "Yes\n";
-    }else{
-        cout << "No\n";   
+    }
+    else
+    {
+        cout << "No\n";
     }
 }

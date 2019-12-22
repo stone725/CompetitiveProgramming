@@ -3,14 +3,17 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     long long scoreA = 0, scoreB = 0;
-    while(n--){
+    while (n--)
+    {
         int a, b;
         cin >> a >> b;
-        if(scoreA == scoreB && !scoreA){
+        if (scoreA == scoreB && !scoreA)
+        {
             scoreA = a;
             scoreB = b;
             continue;

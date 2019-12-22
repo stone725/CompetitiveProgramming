@@ -2,12 +2,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int w;
     cin >> w;
-    if(w % 2 || w == 2){
+    if (w % 2 || w == 2)
+    {
         cout << "NO\n";
-    }else{
+    }
+    else
+    {
         cout << "YES\n";
     }
 }

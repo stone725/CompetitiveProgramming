@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     int ans = 0;
-    for(int i = 1; i * 2 <= str.size(); i++){
+    for (int i = 1; i * 2 <= str.size(); i++)
+    {
         ans += str[i - 1] != str[str.size() - i];
     }
     cout << ans << "\n";

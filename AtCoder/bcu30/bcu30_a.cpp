@@ -2,18 +2,22 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, k;
     cin >> n >> k;
     int p = 0;
-    for(int i = 0; i < k; i++){
+    for (int i = 0; i < k; i++)
+    {
         int a;
         cin >> a;
         p += a;
-        if(n < p){
+        if (n < p)
+        {
             p = n - p % n;
         }
-        if(n == p){
+        if (n == p)
+        {
             break;
         }
     }

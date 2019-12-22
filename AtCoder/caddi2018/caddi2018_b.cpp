@@ -2,18 +2,23 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     bool check = false;
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int a;
         cin >> a;
         check = check || (a % 2);
     }
-    if(check){
+    if (check)
+    {
         cout << "first\n";
-    }else{
+    }
+    else
+    {
         cout << "second\n";
     }
 }

@@ -3,17 +3,21 @@
 
 using namespace std;
 
-long long mod(long long n, int m){
+long long mod(long long n, int m)
+{
     return ((n % m) + m) % m;
 }
 
-int main(){
+int main()
+{
     long long n;
     cin >> n;
     string ans = "";
     long long checkint = 1;
-    do{
-        switch(mod(n / abs(checkint), 2)){
+    do
+    {
+        switch (mod(n / abs(checkint), 2))
+        {
         case 0:
             ans = "0" + ans;
             break;
@@ -23,6 +27,6 @@ int main(){
             break;
         }
         checkint *= -2;
-    }while(n);
+    } while (n);
     cout << ans << "\n";
 }
