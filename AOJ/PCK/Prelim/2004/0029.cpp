@@ -4,14 +4,18 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str, mostfind = "", mostlong = "";
     map<string, int> many;
-    while(cin >> str){
-        if(many[mostfind] < ++many[str]){
+    while (cin >> str)
+    {
+        if (many[mostfind] < ++many[str])
+        {
             mostfind = str;
         }
-        if(mostlong.size() < many.size()){
+        if (mostlong.size() < many.size())
+        {
             mostlong = str;
         }
     }
