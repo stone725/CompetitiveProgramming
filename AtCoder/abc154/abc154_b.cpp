@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str;
     cin >> str;
     cout << string(str.size(), 'x') << "\n";

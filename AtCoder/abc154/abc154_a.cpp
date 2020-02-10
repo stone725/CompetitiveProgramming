@@ -4,13 +4,16 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     string str[2];
-    for(auto&& i : str){
+    for (auto &&i : str)
+    {
         cin >> i;
     }
     map<string, int> cnt;
-    for(auto&& i : str){
+    for (auto &&i : str)
+    {
         int n;
         cin >> n;
         cnt[i] = n;
