@@ -9,6 +9,7 @@ class ModInt
 
 public:
     u64 num;
+    constexpr u64 getMod() noexcept { return Mod; }
     constexpr ModInt(const u64 x = 0) noexcept : num(x % Mod) {}
     constexpr u64 &value() noexcept { return num; }
     constexpr const u64 &value() const noexcept { return num; }
