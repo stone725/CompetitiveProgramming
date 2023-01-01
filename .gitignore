@@ -10,3 +10,4 @@ TopCoder/template.cpp
 *.sample
 *.script
 Library/*.cpp
+a.out
